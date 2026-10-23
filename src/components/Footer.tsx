@@ -42,15 +42,15 @@ const COLUMNS: { title: string; links: FooterLink[] }[] = [
         label: "proyectos@signatech.com.mx",
         href: "mailto:proyectos@signatech.com.mx",
       },
-      { label: "+52 56 1030 0614", href: "tel:+525610300614" },
+      { label: "+52 55 1234 5678", href: "tel:+525512345678" },
       {
         label: "Av. San Antonio 256, Piso 9, Ampliación Nápoles, CDMX",
         href: "https://maps.google.com/?q=Av.+San+Antonio+256,+Ampliaci%C3%B3n+N%C3%A1poles,+03840+Ciudad+de+M%C3%A9xico,+CDMX",
         external: true,
       },
       {
-        label: "www.signatech.com.mx",
-        href: "https://www.signatech.com.mx/",
+        label: "ucc-signatech.com",
+        href: "https://ucc-signatech.com/",
         external: true,
       },
     ],
@@ -154,24 +154,34 @@ export default function Footer() {
       <div className="mx-auto max-w-7xl px-6 pt-16 pb-32 sm:pb-10">
         <div className="grid gap-10 md:grid-cols-12 md:gap-8">
           <div className="md:col-span-4">
-            <Link
-              href="/"
-              className="inline-flex items-center gap-3"
-              aria-label="UCC-Signa, ir al inicio"
-            >
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/images/ucc-logo.ico" alt="" className="h-8 w-8" />
-              <span className="text-lg font-semibold tracking-[-0.02em] text-fg">
-                UCC-Signa
-              </span>
+            <div className="inline-flex items-center gap-3">
+              <Link
+                href="/"
+                className="inline-flex items-center gap-3"
+                aria-label="UCC-Signa, ir al inicio"
+              >
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src="/images/ucc-logo.ico" alt="" className="h-8 w-8" />
+                <span className="text-lg font-semibold tracking-[-0.02em] text-fg">
+                  UCC-Signa
+                </span>
+              </Link>
               <span className="text-xs text-fg-subtle">by</span>
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src="/images/signatech-logo.webp"
-                alt="Signatech"
-                className="h-8 w-16 object-contain object-bottom dark:invert"
-              />
-            </Link>
+              {/* El logo de Signatech lleva al sitio corporativo */}
+              <a
+                href="https://www.signatech.com.mx/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Signatech (se abre en otra pestaña)"
+              >
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="/images/signatech-logo.webp"
+                  alt="Signatech"
+                  className="h-8 w-16 object-contain object-bottom dark:invert"
+                />
+              </a>
+            </div>
             <p className="mt-5 max-w-xs text-sm leading-relaxed text-fg-muted">
               Plataforma SaaS para automatizar el cumplimiento fiscal en control
               volumétrico de hidrocarburos y petrolíferos.

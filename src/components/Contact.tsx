@@ -195,10 +195,10 @@ export default function Contact() {
               delay={0.05}
             >
               <a
-                href="tel:+525610300614"
+                href="tel:+525512345678"
                 className=" text-fg-muted transition-colors hover:text-accent"
               >
-                +52 56 1030 0614
+                +52 55 1234 5678
               </a>
             </ContactInfo>
             <ContactInfo
@@ -220,12 +220,12 @@ export default function Contact() {
               delay={0.12}
             >
               <a
-                href="https://www.signatech.com.mx/"
+                href="https://ucc-signatech.com/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className=" text-fg-muted transition-colors hover:text-accent"
               >
-                www.signatech.com.mx
+                ucc-signatech.com
               </a>
             </ContactInfo>
             <motion.div

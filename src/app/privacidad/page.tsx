@@ -68,7 +68,7 @@ export default function PrivacidadPage() {
                 </li>
                 <li>
                   <strong>Teléfono:</strong>
-                  {" +52 56 1030 0614"}
+                  {" +52 55 1234 5678"}
                 </li>
               </ul>
             </div>
@@ -452,7 +452,7 @@ export default function PrivacidadPage() {
                   <p>
                     <strong>Teléfono:</strong>
                   </p>
-                  <p>+52 56 1030 0614</p>
+                  <p>+52 55 1234 5678</p>
                 </div>
                 <div>
                   <p>

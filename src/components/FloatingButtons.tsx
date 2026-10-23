@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { Mail, MessageCircle } from "lucide-react";
 import { easeOut, springSnappy } from "@/lib/motion";
 
-const WHATSAPP_URL = `https://wa.me/525610300614?text=${encodeURIComponent(
+const WHATSAPP_URL = `https://wa.me/525512345678?text=${encodeURIComponent(
   "Hola, me interesa conocer más sobre UCC-SIGNA",
 )}`;
 

@@ -63,7 +63,7 @@ export default function TerminosPage() {
                 </li>
                 <li>
                   <strong>Teléfono:</strong>
-                  {" +52 56 1030 0614"}
+                  {" +52 55 1234 5678"}
                 </li>
               </ul>
             </div>
@@ -287,7 +287,7 @@ export default function TerminosPage() {
                 </p>
                 <p>
                   <strong>Teléfono:</strong>
-                  {" +52 56 1030 0614"}
+                  {" +52 55 1234 5678"}
                 </p>
                 <p>
                   <strong>Domicilio:</strong>
