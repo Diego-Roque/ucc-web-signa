@@ -1,26 +1,163 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+/* dark: aplica cuando <html data-theme="dark"> (lo fija el script en línea del layout) */
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-geist), system-ui, sans-serif;
+
+  /* Tokens semánticos: cambian de valor con el tema */
+  --color-canvas: var(--canvas);
+  --color-canvas-alt: var(--canvas-alt);
+  --color-card: var(--card);
+  --color-fill: var(--fill);
+  --color-fg: var(--fg);
+  --color-fg-muted: var(--fg-muted);
+  --color-fg-subtle: var(--fg-subtle);
+  --color-line: var(--line);
+  --color-line-strong: var(--line-strong);
+  --color-tint: var(--tint);
+  --color-tint-line: var(--tint-line);
+  --color-glow: var(--glow);
+  --color-accent: var(--accent);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* Paleta naranja (escala orange de Tailwind) sobre neutros grafito sin tinte azul.
+   Rellenos en brand-600; el texto en acento usa brand-700 en claro para mantener 4.5:1 sobre blanco. */
+@theme {
+  --color-brand-50: #fff7ed;
+  --color-brand-100: #ffedd5;
+  --color-brand-200: #fed7aa;
+  --color-brand-300: #fdba74;
+  --color-brand-400: #fb923c;
+  --color-brand-500: #f97316;
+  --color-brand-600: #ea580c;
+  --color-brand-700: #c2410c;
+  --color-brand-800: #9a3412;
+  --color-brand-900: #7c2d12;
+  --color-ink: #151413;
+  --color-ink-soft: #242220;
+}
+
+:root {
+  color-scheme: light;
+  --canvas: #ffffff;
+  --canvas-alt: #f8f8f7;
+  --card: #ffffff;
+  --fill: #f2f1ef;
+  --fg: #171615;
+  --fg-muted: #55514c;
+  --fg-subtle: #6f6a64;
+  --line: #e8e6e3;
+  --line-strong: #d3d0cb;
+  --tint: #ffedd5;
+  --tint-line: #fed7aa;
+  --glow: rgb(254 215 170 / 0.5);
+  --accent: #c2410c;
+  --glass: rgb(255 255 255 / 0.72);
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --canvas: #0d0c0b;
+  --canvas-alt: #121110;
+  --card: #191816;
+  --fill: #201e1c;
+  --fg: #eeece9;
+  --fg-muted: #aaa49d;
+  --fg-subtle: #8b857e;
+  --line: #262422;
+  --line-strong: #36332f;
+  --tint: #1f1915;
+  --tint-line: #33271e;
+  --glow: rgb(249 115 22 / 0.1);
+  --accent: #fb923c;
+  --glass: rgb(13 12 11 / 0.68);
+}
+
+html {
+  /* Los anclas (#contacto, etc.) aterrizan debajo de la barra fija */
+  scroll-padding-top: 5rem;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Cambio de tema suave en lugar de un salto brusco de brillo; solo durante el cambio */
+  html.theme-transition,
+  html.theme-transition *,
+  html.theme-transition *::before,
+  html.theme-transition *::after {
+    transition:
+      background-color 300ms ease,
+      border-color 300ms ease,
+      color 300ms ease,
+      fill 300ms ease !important;
   }
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--canvas);
+  color: var(--fg);
+  font-feature-settings: "ss01", "cv11";
+}
+
+/* Cifras alineadas en columnas para números grandes */
+.figures {
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.035em;
+}
+
+/* Material translúcido para barras y controles flotantes (aproximación web, no Liquid Glass oficial) */
+.glass {
+  background: var(--glass);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  backdrop-filter: blur(20px) saturate(180%);
+}
+
+.glass-dark {
+  background: rgb(21 20 19 / 0.45);
+  -webkit-backdrop-filter: blur(16px) saturate(160%);
+  backdrop-filter: blur(16px) saturate(160%);
+}
+
+@media (prefers-reduced-transparency: reduce) {
+  .glass {
+    background: var(--canvas);
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+  }
+  .glass-dark {
+    background: var(--color-ink);
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+  }
+}
+
+@media (prefers-contrast: more) {
+  .glass {
+    background: var(--canvas);
+    border-color: var(--fg);
+  }
+}
+
+/* Barra de tiempo de las etapas de la plataforma */
+@keyframes stage-progress {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
 }
