@@ -51,7 +51,7 @@ export default function TerminosPage() {
               <ul className="mt-4 space-y-1">
                 <li>
                   <strong>Domicilio:</strong>
-                  {" Heriberto Frías 1145, Del Valle Centro, CDMX, 03100"}
+                  {" Av. San Antonio 256, Piso 9, Col. Ampliación Nápoles, C.P. 03840, Ciudad de México, México"}
                 </li>
                 <li>
                   <strong>RFC:</strong>
@@ -59,11 +59,11 @@ export default function TerminosPage() {
                 </li>
                 <li>
                   <strong>Correo:</strong>
-                  {" contacto@example.com"}
+                  {" proyectos@signatech.com.mx"}
                 </li>
                 <li>
                   <strong>Teléfono:</strong>
-                  {" +52 (555) 123-4567"}
+                  {" +52 56 1030 0614"}
                 </li>
               </ul>
             </div>
@@ -283,15 +283,15 @@ export default function TerminosPage() {
               <div className="space-y-2">
                 <p>
                   <strong>Email:</strong>
-                  {" contacto@example.com"}
+                  {" proyectos@signatech.com.mx"}
                 </p>
                 <p>
                   <strong>Teléfono:</strong>
-                  {" +52 (555) 123-4567"}
+                  {" +52 56 1030 0614"}
                 </p>
                 <p>
                   <strong>Domicilio:</strong>
-                  {" Heriberto Frías 1145, Del Valle Centro, CDMX, 03100"}
+                  {" Av. San Antonio 256, Piso 9, Col. Ampliación Nápoles, C.P. 03840, Ciudad de México, México"}
                 </p>
               </div>
             </div>

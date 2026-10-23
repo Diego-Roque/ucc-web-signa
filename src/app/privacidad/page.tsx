@@ -60,15 +60,15 @@ export default function PrivacidadPage() {
                 </li>
                 <li>
                   <strong>Domicilio:</strong>
-                  {" Heriberto Frías 1145, Del Valle Centro, CDMX, 03100"}
+                  {" Av. San Antonio 256, Piso 9, Col. Ampliación Nápoles, C.P. 03840, Ciudad de México, México"}
                 </li>
                 <li>
                   <strong>Correo electrónico:</strong>
-                  {" contacto@example.com"}
+                  {" proyectos@signatech.com.mx"}
                 </li>
                 <li>
                   <strong>Teléfono:</strong>
-                  {" +52 (555) 123-4567"}
+                  {" +52 56 1030 0614"}
                 </li>
               </ul>
             </div>
@@ -294,7 +294,7 @@ export default function PrivacidadPage() {
                 <div className="space-y-3 text-sm">
                   <p>
                     <strong>Correo:</strong>
-                    {" contacto@example.com"}
+                    {" proyectos@signatech.com.mx"}
                   </p>
                   <p>
                     <strong>Requisitos:</strong>
@@ -446,22 +446,24 @@ export default function PrivacidadPage() {
                   <p>
                     <strong>Email Especializado:</strong>
                   </p>
-                  <p>privacidad@example.com</p>
+                  <p>proyectos@signatech.com.mx</p>
                 </div>
                 <div>
                   <p>
                     <strong>Teléfono:</strong>
                   </p>
-                  <p>+52 (555) 123-4567</p>
+                  <p>+52 56 1030 0614</p>
                 </div>
                 <div>
                   <p>
                     <strong>Domicilio:</strong>
                   </p>
                   <p>
-                    Heriberto Frías 1145
+                    Av. San Antonio 256, Piso 9
                     <br />
-                    Del Valle Centro, CDMX, 03100
+                    Col. Ampliación Nápoles, C.P. 03840
+                    <br />
+                    Ciudad de México, México
                   </p>
                 </div>
               </div>

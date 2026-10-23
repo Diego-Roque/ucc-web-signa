@@ -6,6 +6,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import {
   CircleCheckBig,
   CircleX,
+  Globe,
   Mail,
   MapPin,
   Phone,
@@ -38,7 +39,7 @@ const INDUSTRIAS = [
 ];
 
 const MAP_SRC =
-  "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3763.7302688097434!2d-99.16521252478698!3d19.380828581887506!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1ffa13141bde5%3A0x3cfdcf6e3401adb7!2sHeriberto%20Fr%C3%ADas%201145%2C%20Col%20del%20Valle%20Centro%2C%20Benito%20Ju%C3%A1rez%2C%2003100%20Ciudad%20de%20M%C3%A9xico%2C%20CDMX!5e0!3m2!1ses!2smx!4v1745020765570!5m2!1ses!2smx";
+  "https://maps.google.com/maps?q=Av.+San+Antonio+256,+Ampliaci%C3%B3n+N%C3%A1poles,+03840+Ciudad+de+M%C3%A9xico,+CDMX&z=16&output=embed";
 
 interface FormValues {
   nombre: string;
@@ -182,10 +183,10 @@ export default function Contact() {
               delay={0}
             >
               <a
-                href="mailto:comercial@signatech.com.mx"
+                href="mailto:proyectos@signatech.com.mx"
                 className=" text-fg-muted transition-colors hover:text-accent"
               >
-                comercial@signatech.com.mx
+                proyectos@signatech.com.mx
               </a>
             </ContactInfo>
             <ContactInfo
@@ -194,10 +195,10 @@ export default function Contact() {
               delay={0.05}
             >
               <a
-                href="tel:+525534670590"
+                href="tel:+525610300614"
                 className=" text-fg-muted transition-colors hover:text-accent"
               >
-                +52 55 3467 0590
+                +52 56 1030 0614
               </a>
             </ContactInfo>
             <ContactInfo
@@ -206,10 +207,26 @@ export default function Contact() {
               delay={0.1}
             >
               <p className="leading-relaxed text-fg-muted">
-                Heriberto Frías 1145,
+                Av. San Antonio 256, Piso 9,
                 <br />
-                Del Valle Centro, CDMX, 03100
+                Col. Ampliación Nápoles, C.P. 03840
+                <br />
+                Ciudad de México, México
               </p>
+            </ContactInfo>
+            <ContactInfo
+              icon={<Globe className="h-4 w-4" />}
+              title="Sitio web"
+              delay={0.12}
+            >
+              <a
+                href="https://www.signatech.com.mx/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className=" text-fg-muted transition-colors hover:text-accent"
+              >
+                www.signatech.com.mx
+              </a>
             </ContactInfo>
             <motion.div
               className="h-64 overflow-hidden rounded-2xl bg-card ring-1 ring-line lg:h-auto lg:min-h-64 lg:flex-1"

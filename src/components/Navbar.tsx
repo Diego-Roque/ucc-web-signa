@@ -54,24 +54,34 @@ export default function Navbar() {
       aria-label="Principal"
     >
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6">
-        <Link
-          href="/"
-          className="flex items-center gap-3"
-          aria-label="UCC-Signa, inicio"
-        >
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/images/ucc-logo.ico" alt="" className="h-8 w-8" />
-          <span className="text-lg font-medium tracking-tight text-fg">
-            UCC-Signa
-          </span>
+        <div className="flex items-center gap-3">
+          <Link
+            href="/"
+            className="flex items-center gap-3"
+            aria-label="UCC-Signa, inicio"
+          >
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/images/ucc-logo.ico" alt="" className="h-8 w-8" />
+            <span className="text-lg font-medium tracking-tight text-fg">
+              UCC-Signa
+            </span>
+          </Link>
           <span className="text-xs text-fg-subtle">by</span>
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src="/images/signatech-logo.webp"
-            alt="Signatech"
-            className="h-8 w-16 object-contain object-bottom dark:invert"
-          />
-        </Link>
+          {/* El logo de Signatech lleva al sitio corporativo */}
+          <a
+            href="https://www.signatech.com.mx/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Signatech (se abre en otra pestaña)"
+          >
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/images/signatech-logo.webp"
+              alt="Signatech"
+              className="h-8 w-16 object-contain object-bottom dark:invert"
+            />
+          </a>
+        </div>
 
         <div className="hidden items-center gap-1 md:flex">
           {SECTIONS.map((id) => {

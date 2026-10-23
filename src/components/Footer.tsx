@@ -39,13 +39,18 @@ const COLUMNS: { title: string; links: FooterLink[] }[] = [
     title: "Contacto",
     links: [
       {
-        label: "comercial@signatech.com.mx",
-        href: "mailto:comercial@signatech.com.mx",
+        label: "proyectos@signatech.com.mx",
+        href: "mailto:proyectos@signatech.com.mx",
       },
-      { label: "+52 55 3467 0590", href: "tel:+525534670590" },
+      { label: "+52 56 1030 0614", href: "tel:+525610300614" },
       {
-        label: "Heriberto Frías 1145, Del Valle Centro, CDMX",
-        href: "https://maps.google.com/?q=Heriberto+Fr%C3%ADas+1145,+Del+Valle+Centro,+CDMX",
+        label: "Av. San Antonio 256, Piso 9, Ampliación Nápoles, CDMX",
+        href: "https://maps.google.com/?q=Av.+San+Antonio+256,+Ampliaci%C3%B3n+N%C3%A1poles,+03840+Ciudad+de+M%C3%A9xico,+CDMX",
+        external: true,
+      },
+      {
+        label: "www.signatech.com.mx",
+        href: "https://www.signatech.com.mx/",
         external: true,
       },
     ],

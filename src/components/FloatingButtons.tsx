@@ -4,11 +4,11 @@ import { motion } from "framer-motion";
 import { Mail, MessageCircle } from "lucide-react";
 import { easeOut, springSnappy } from "@/lib/motion";
 
-const WHATSAPP_URL = `https://wa.me/525534670590?text=${encodeURIComponent(
+const WHATSAPP_URL = `https://wa.me/525610300614?text=${encodeURIComponent(
   "Hola, me interesa conocer más sobre UCC-SIGNA",
 )}`;
 
-const MAIL_URL = `mailto:comercial@signatech.com.mx?subject=${encodeURIComponent(
+const MAIL_URL = `mailto:proyectos@signatech.com.mx?subject=${encodeURIComponent(
   "Consulta sobre UCC-SIGNA",
 )}&body=${encodeURIComponent(
   "Hola, me interesa conocer más sobre la plataforma UCC-SIGNA para el control volumétrico de hidrocarburos.",
